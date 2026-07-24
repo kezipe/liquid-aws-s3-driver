@@ -67,7 +67,7 @@ struct LiquidAWSS3Storage: FileStorage {
     /// https://docs.aws.amazon.com/general/latest/gr/s3.html
     func upload(key: String, data: Data) async throws -> String {
         let input = PutObjectInput(
-            body: .from(data: data),
+            body: .data(data),
             bucket: bucket,
             key: key)
         _ = try await s3.putObject(input: input)
