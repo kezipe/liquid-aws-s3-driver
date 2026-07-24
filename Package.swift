@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:6.1
 import PackageDescription
 
 let package = Package(
@@ -12,12 +12,12 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/aoenth/liquid-kit.git", from: "1.3.6"),
-        .package(name: "AWSSwiftSDK", url: "https://github.com/awslabs/aws-sdk-swift", from: "0.19.0"),
+        .package(url: "https://github.com/awslabs/aws-sdk-swift", exact: "0.36.2"),
     ],
     targets: [
         .target(name: "LiquidAWSS3Driver", dependencies: [
             .product(name: "LiquidKit", package: "liquid-kit"),
-            .product(name: "AWSS3", package: "AWSSwiftSDK"),
+            .product(name: "AWSS3", package: "aws-sdk-swift"),
         ]),
         .testTarget(name: "LiquidAWSS3DriverTests", dependencies: [
             .target(name: "LiquidAWSS3Driver"),
