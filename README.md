@@ -4,6 +4,8 @@
 
 AWS S3 driver implementation for the [LiquidKit](https://github.com/aoenth/liquid-kit) file storage solution, based on the [AWS Swift SDK](https://aws.amazon.com/sdk-for-swift/) project.
 
+The package requires Swift 6.1 or newer and uses AWS SDK for Swift 1.7.62 or newer within the 1.x release line. The lower-bound requirement lets applications receive compatible SDK security and bug fixes while SwiftPM's `Package.resolved` keeps application and CI builds reproducible.
+
 LiquidKit and the AWS S3 driver is also compatible with Vapor 4 through the [Liquid](https://github.com/aoenth/liquid) repository, that contains Vapor specific extensions.
 
 ## Key resolution for S3 objects
@@ -30,7 +32,7 @@ e.g.
 
 It is possible to configure credentials via multiple methods, by default the driver will try to load the credentials from the shared credential file.
 
-You can read more about the configuration in the AWS SDK Swift [readme](https://github.com/swift-aws/aws-sdk-swift).
+You can read more about the configuration in the AWS SDK Swift [documentation](https://docs.aws.amazon.com/sdk-for-swift/latest/developer-guide/credential-providers.html).
 
 To get started with a default shared credential file, place the following values into the `~/.aws/credentials` file.
 
@@ -47,17 +49,17 @@ aws_secret_access_key = YOUR_AWS_SECRET_ACCESS_KEY
 Add the required dependencies using SPM:
 
 ```swift
-// swift-tools-version:5.3
+// swift-tools-version:6.1
 import PackageDescription
 
 let package = Package(
     name: "myProject",
     platforms: [
-       .macOS(.v10_15)
+       .macOS(.v12)
     ],
     dependencies: [
         .package(url: "https://github.com/aoenth/liquid", from: "1.3.3"),
-        .package(url: "https://github.com/aoenth/liquid-aws-s3-driver", from: "1.2.2"),
+        .package(url: "https://github.com/kezipe/liquid-aws-s3-driver.git", from: "2.1.0"),
     ],
     targets: [
         .target(name: "App", dependencies: [
@@ -79,20 +81,33 @@ pool.start()
 /// create fs  
 let fileio = NonBlockingFileIO(threadPool: pool)
 let storages = FileStorages(fileio: fileio)
-storages.use(.awsS3(region: .uswest1, bucket: "testbucket"), as: .awsS3)
+storages.use(.awsS3(region: "us-west-1", bucket: "testbucket"), as: .awsS3)
 let fs = storages.fileStorage(.awsS3, logger: .init(label: "[test-logger]"), on: elg.next())!
 
 /// test file upload
 let key = "test.txt"
 let data = Data("file storage test".utf8)
-let res = try fs.upload(key: key, data: data).wait()
+let res = try await fs.upload(key: key, data: data)
 
 /// https://testbucket.s3-us-west-1.amazonaws.com/test.txt
 let url = req.fs.resolve(key: key)
 
 /// delete key
-try req.fs.delete(key: key).wait()
+try await fs.delete(key: key)
 
+```
+
+For an S3-compatible service, pass its base URL as `endpoint`; the SDK uses that endpoint for requests and the driver uses it when resolving public object URLs:
+
+```swift
+storages.use(
+    .awsS3(
+        region: "us-east-1",
+        bucket: "testbucket",
+        endpoint: "http://localhost:9000"
+    ),
+    as: .awsS3
+)
 ```
 
 ## Credits

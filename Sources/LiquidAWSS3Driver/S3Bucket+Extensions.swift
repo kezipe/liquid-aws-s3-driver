@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct S3Bucket: ExpressibleByStringLiteral {
+public struct S3Bucket: ExpressibleByStringLiteral, Sendable {
     let name: String
 
     /// Create a Bucket object using a String literal
@@ -41,4 +41,3 @@ public struct S3Bucket: ExpressibleByStringLiteral {
         return true
     }
 }
-

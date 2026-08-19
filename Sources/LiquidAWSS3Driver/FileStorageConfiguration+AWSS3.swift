@@ -10,11 +10,12 @@ public extension FileStorageConfigurationFactory {
 
     /// creates a new Liquid FileStorageConfigurationFactory object using the provided S3 configuration 
     static func awsS3(region: Region,
-                      bucket: S3Bucket) -> FileStorageConfigurationFactory {
+                      bucket: S3Bucket,
+                      endpoint: String? = nil) -> FileStorageConfigurationFactory {
         .init {
             LiquidAWSS3StorageConfiguration(region: region,
                                             bucket: bucket,
-											endpoint: nil)
+                                            endpoint: endpoint)
         }
     }
 }

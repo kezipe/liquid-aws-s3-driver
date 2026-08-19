@@ -1,0 +1,206 @@
+Get:1 http://ports.ubuntu.com/ubuntu-ports jammy InRelease [270 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease [128 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease [127 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease [129 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports jammy/restricted arm64 Packages [24.2 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports jammy/universe arm64 Packages [17.2 MB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports jammy/main arm64 Packages [1758 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports jammy/multiverse arm64 Packages [224 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 Packages [4368 kB]
+Get:10 http://ports.ubuntu.com/ubuntu-ports jammy-updates/restricted arm64 Packages [7979 kB]
+Get:11 http://ports.ubuntu.com/ubuntu-ports jammy-updates/universe arm64 Packages [1696 kB]
+Get:12 http://ports.ubuntu.com/ubuntu-ports jammy-updates/multiverse arm64 Packages [69.7 kB]
+Get:13 http://ports.ubuntu.com/ubuntu-ports jammy-backports/main arm64 Packages [82.4 kB]
+Get:14 http://ports.ubuntu.com/ubuntu-ports jammy-backports/universe arm64 Packages [33.7 kB]
+Get:15 http://ports.ubuntu.com/ubuntu-ports jammy-security/universe arm64 Packages [1397 kB]
+Get:16 http://ports.ubuntu.com/ubuntu-ports jammy-security/restricted arm64 Packages [7612 kB]
+Get:17 http://ports.ubuntu.com/ubuntu-ports jammy-security/main arm64 Packages [4026 kB]
+Get:18 http://ports.ubuntu.com/ubuntu-ports jammy-security/multiverse arm64 Packages [62.9 kB]
+Fetched 47.2 MB in 4s (13.4 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20260601~22.04.1).
+ca-certificates set to manually installed.
+git is already the newest version (1:2.34.1-1ubuntu1.17).
+Suggested packages:
+  libssl-doc
+The following NEW packages will be installed:
+  libssl-dev
+0 upgraded, 1 newly installed, 0 to remove and 4 not upgraded.
+Need to get 2302 kB of archives.
+After this operation, 12.3 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 libssl-dev arm64 3.0.2-0ubuntu1.26 [2302 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 2302 kB in 0s (15.7 MB/s)
+Selecting previously unselected package libssl-dev:arm64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 18187 files and directories currently installed.)
+Preparing to unpack .../libssl-dev_3.0.2-0ubuntu1.26_arm64.deb ...
+Unpacking libssl-dev:arm64 (3.0.2-0ubuntu1.26) ...
+Setting up libssl-dev:arm64 (3.0.2-0ubuntu1.26) ...
+Cloning into '/tmp/aws-crt-swift'...
+Note: switching to '0d0a0cf2e2cb780ceeceac190b4ede94f4f96902'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Submodule 'aws-common-runtime/aws-c-auth' (https://github.com/awslabs/aws-c-auth.git) registered for path 'aws-common-runtime/aws-c-auth'
+Submodule 'aws-common-runtime/aws-c-cal' (https://github.com/awslabs/aws-c-cal) registered for path 'aws-common-runtime/aws-c-cal'
+Submodule 'aws-common-runtime/aws-c-common' (https://github.com/awslabs/aws-c-common.git) registered for path 'aws-common-runtime/aws-c-common'
+Submodule 'aws-common-runtime/aws-c-compression' (https://github.com/awslabs/aws-c-compression.git) registered for path 'aws-common-runtime/aws-c-compression'
+Submodule 'aws-common-runtime/aws-c-event-stream' (https://github.com/awslabs/aws-c-event-stream) registered for path 'aws-common-runtime/aws-c-event-stream'
+Submodule 'aws-common-runtime/aws-c-http' (https://github.com/awslabs/aws-c-http.git) registered for path 'aws-common-runtime/aws-c-http'
+Submodule 'aws-common-runtime/aws-c-io' (https://github.com/awslabs/aws-c-io.git) registered for path 'aws-common-runtime/aws-c-io'
+Submodule 'aws-common-runtime/aws-c-sdkutils' (https://github.com/awslabs/aws-c-sdkutils) registered for path 'aws-common-runtime/aws-c-sdkutils'
+Submodule 'aws-common-runtime/aws-checksums' (https://github.com/awslabs/aws-checksums) registered for path 'aws-common-runtime/aws-checksums'
+Submodule 'aws-common-runtime/s2n' (https://github.com/aws/s2n-tls.git) registered for path 'aws-common-runtime/s2n'
+Cloning into '/tmp/aws-crt-swift/aws-common-runtime/aws-c-auth'...
+Cloning into '/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal'...
+Cloning into '/tmp/aws-crt-swift/aws-common-runtime/aws-c-common'...
+Cloning into '/tmp/aws-crt-swift/aws-common-runtime/aws-c-compression'...
+Cloning into '/tmp/aws-crt-swift/aws-common-runtime/aws-c-event-stream'...
+Cloning into '/tmp/aws-crt-swift/aws-common-runtime/aws-c-http'...
+Cloning into '/tmp/aws-crt-swift/aws-common-runtime/aws-c-io'...
+Cloning into '/tmp/aws-crt-swift/aws-common-runtime/aws-c-sdkutils'...
+Cloning into '/tmp/aws-crt-swift/aws-common-runtime/aws-checksums'...
+Cloning into '/tmp/aws-crt-swift/aws-common-runtime/s2n'...
+From https://github.com/awslabs/aws-c-auth
+ * branch            7911fa28a45d378d9a6927e0a60f4e270d339f1f -> FETCH_HEAD
+Submodule path 'aws-common-runtime/aws-c-auth': checked out '7911fa28a45d378d9a6927e0a60f4e270d339f1f'
+From https://github.com/awslabs/aws-c-cal
+ * branch            b52d9e8ee7af8155e6928c977ec5fde25a507ba0 -> FETCH_HEAD
+Submodule path 'aws-common-runtime/aws-c-cal': checked out 'b52d9e8ee7af8155e6928c977ec5fde25a507ba0'
+From https://github.com/awslabs/aws-c-common
+ * branch            8eaa0986ad3cfd46c87432a2e4c8ab81a786085f -> FETCH_HEAD
+Submodule path 'aws-common-runtime/aws-c-common': checked out '8eaa0986ad3cfd46c87432a2e4c8ab81a786085f'
+From https://github.com/awslabs/aws-c-compression
+ * branch            99ec79ee2970f1a045d4ced1501b97ee521f2f85 -> FETCH_HEAD
+Submodule path 'aws-common-runtime/aws-c-compression': checked out '99ec79ee2970f1a045d4ced1501b97ee521f2f85'
+From https://github.com/awslabs/aws-c-event-stream
+ * branch            b7a96fd2dc43f4625d784ea51106e1fac4255f7a -> FETCH_HEAD
+Submodule path 'aws-common-runtime/aws-c-event-stream': checked out 'b7a96fd2dc43f4625d784ea51106e1fac4255f7a'
+From https://github.com/awslabs/aws-c-http
+ * branch            6a1c157c20640a607102738909e89561a41e91e9 -> FETCH_HEAD
+Submodule path 'aws-common-runtime/aws-c-http': checked out '6a1c157c20640a607102738909e89561a41e91e9'
+From https://github.com/awslabs/aws-c-io
+ * branch            6225ebb9da28f1023ad5e21694de9d165cd65f3b -> FETCH_HEAD
+Submodule path 'aws-common-runtime/aws-c-io': checked out '6225ebb9da28f1023ad5e21694de9d165cd65f3b'
+From https://github.com/awslabs/aws-c-sdkutils
+ * branch            fd8c0ba2e233997eaaefe82fb818b8b444b956d3 -> FETCH_HEAD
+Submodule path 'aws-common-runtime/aws-c-sdkutils': checked out 'fd8c0ba2e233997eaaefe82fb818b8b444b956d3'
+From https://github.com/awslabs/aws-checksums
+ * branch            321b805559c8e911be5bddba13fcbd222a3e2d3a -> FETCH_HEAD
+Submodule path 'aws-common-runtime/aws-checksums': checked out '321b805559c8e911be5bddba13fcbd222a3e2d3a'
+From https://github.com/aws/s2n-tls
+ * branch            a9a07a25fa0d897ba6ad2b161b4b8ea9e97b6abd -> FETCH_HEAD
+Submodule path 'aws-common-runtime/s2n': checked out 'a9a07a25fa0d897ba6ad2b161b4b8ea9e97b6abd'
+Submodule 'tests/cbmc/aws-verification-model-for-libcrypto' (https://github.com/awslabs/aws-verification-model-for-libcrypto.git) registered for path 'aws-common-runtime/s2n/tests/cbmc/aws-verification-model-for-libcrypto'
+Cloning into '/tmp/aws-crt-swift/aws-common-runtime/s2n/tests/cbmc/aws-verification-model-for-libcrypto'...
+From https://github.com/awslabs/aws-verification-model-for-libcrypto
+ * branch            440a07ca02d60ff8158cb99fb89833de35d76ae6 -> FETCH_HEAD
+Submodule path 'aws-common-runtime/s2n/tests/cbmc/aws-verification-model-for-libcrypto': checked out '440a07ca02d60ff8158cb99fb89833de35d76ae6'
+warning: 'aws-crt-swift': Invalid Exclude '/tmp/aws-crt-swift/aws-common-runtime/s2n/pq-crypto/Makefile': File not found.
+warning: 'aws-crt-swift': Invalid Exclude '/tmp/aws-crt-swift/aws-common-runtime/s2n/pq-crypto/README.md': File not found.
+warning: 'aws-crt-swift': Invalid Exclude '/tmp/aws-crt-swift/aws-common-runtime/s2n/pq-crypto/s2n_pq_asm.mk': File not found.
+warning: 'aws-crt-swift': Invalid Exclude '/tmp/aws-crt-swift/aws-common-runtime/s2n/pq-crypto/kyber_r3': File not found.
+Building for production...
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:81:103: error: incomplete definition of type 'struct openssl_hmac_ctx_table'
+   81 |         (int (*)(HMAC_CTX *, const void *, int, const EVP_MD *, ENGINE *))g_aws_openssl_hmac_ctx_table->impl.init_ex_fn;
+      |                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:25:15: note: forward declaration of 'struct openssl_hmac_ctx_table'
+   25 | static struct openssl_hmac_ctx_table hmac_ctx_table;
+      |               ^
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:108:33: error: incomplete definition of type 'struct openssl_hmac_ctx_table'
+  108 |     g_aws_openssl_hmac_ctx_table->init_fn(ctx);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:25:15: note: forward declaration of 'struct openssl_hmac_ctx_table'
+   25 | static struct openssl_hmac_ctx_table hmac_ctx_table;
+      |               ^
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:118:33: error: incomplete definition of type 'struct openssl_hmac_ctx_table'
+  118 |     g_aws_openssl_hmac_ctx_table->clean_up_fn(ctx);
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:25:15: note: forward declaration of 'struct openssl_hmac_ctx_table'
+   25 | static struct openssl_hmac_ctx_table hmac_ctx_table;
+      |               ^
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:134:5: error: use of undeclared identifier 'hmac_ctx_init'
+  134 |     hmac_ctx_init init_fn = (hmac_ctx_init)HMAC_CTX_init;
+      |     ^~~~~~~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:135:5: error: use of undeclared identifier 'hmac_ctx_clean_up'
+  135 |     hmac_ctx_clean_up clean_up_fn = (hmac_ctx_clean_up)HMAC_CTX_cleanup;
+      |     ^~~~~~~~~~~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:136:5: error: use of undeclared identifier 'hmac_update'
+  136 |     hmac_update update_fn = (hmac_update)HMAC_Update;
+      |     ^~~~~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:137:5: error: use of undeclared identifier 'hmac_final'
+  137 |     hmac_final final_fn = (hmac_final)HMAC_Final;
+      |     ^~~~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:138:5: error: use of undeclared identifier 'hmac_init_ex'
+  138 |     hmac_init_ex init_ex_fn = (hmac_init_ex)HMAC_Init_ex;
+      |     ^~~~~~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:141:28: error: use of undeclared identifier 'init_fn'
+  141 |     bool has_102_symbols = init_fn && clean_up_fn && update_fn && final_fn && init_ex_fn;
+      |                            ^~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:141:39: error: use of undeclared identifier 'clean_up_fn'
+  141 |     bool has_102_symbols = init_fn && clean_up_fn && update_fn && final_fn && init_ex_fn;
+      |                                       ^~~~~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:141:54: error: use of undeclared identifier 'update_fn'
+  141 |     bool has_102_symbols = init_fn && clean_up_fn && update_fn && final_fn && init_ex_fn;
+      |                                                      ^~~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:141:67: error: use of undeclared identifier 'final_fn'
+  141 |     bool has_102_symbols = init_fn && clean_up_fn && update_fn && final_fn && init_ex_fn;
+      |                                                                   ^~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:141:79: error: use of undeclared identifier 'init_ex_fn'
+  141 |     bool has_102_symbols = init_fn && clean_up_fn && update_fn && final_fn && init_ex_fn;
+      |                                                                               ^~~~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:146:21: error: use of undeclared identifier 'init_fn'
+  146 |         *(void **)(&init_fn) = dlsym(module, "HMAC_CTX_init");
+      |                     ^~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:147:21: error: use of undeclared identifier 'clean_up_fn'
+  147 |         *(void **)(&clean_up_fn) = dlsym(module, "HMAC_CTX_cleanup");
+      |                     ^~~~~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:148:21: error: use of undeclared identifier 'update_fn'
+  148 |         *(void **)(&update_fn) = dlsym(module, "HMAC_Update");
+      |                     ^~~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:149:21: error: use of undeclared identifier 'final_fn'
+  149 |         *(void **)(&final_fn) = dlsym(module, "HMAC_Final");
+      |                     ^~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:150:21: error: use of undeclared identifier 'init_ex_fn'
+  150 |         *(void **)(&init_ex_fn) = dlsym(module, "HMAC_Init_ex");
+      |                     ^~~~~~~~~~
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/openssl_platform_init.c:151:13: error: use of undeclared identifier 'init_fn'
+  151 |         if (init_fn) {
+      |             ^~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+[0/13] Compiling openssl_platform_init.c
+[0/13] Compiling der.c
+[0/13] Compiling hash.c
+[0/13] Compiling hmac.c
+[0/13] Compiling rsa.c
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/opensslcrypto_hash.c:46:9: error: use of undeclared identifier 'g_aws_openssl_evp_md_ctx_table'
+   46 |         g_aws_openssl_evp_md_ctx_table->free_fn(ctx);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0/13] Compiling symmetric_cipher.c
+[0/13] Compiling opensslcrypto_hash.c
+[0/13] Compiling cal.c
+[0/13] Compiling openssl_rsa.c
+[0/13] Compiling opensslcrypto_ecc.c
+[0/13] Compiling openssl_aes.c
+/tmp/aws-crt-swift/aws-common-runtime/aws-c-cal/source/unix/opensslcrypto_hmac.c:30:9: error: use of undeclared identifier 'g_aws_openssl_hmac_ctx_table'
+   30 |         g_aws_openssl_hmac_ctx_table->free_fn(ctx);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0/13] Compiling opensslcrypto_hmac.c
+[0/13] Compiling ecc.c

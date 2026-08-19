@@ -8,7 +8,7 @@
 import LiquidKit
 import AWSS3
 
-public struct Region: ExpressibleByStringLiteral {
+public struct Region: ExpressibleByStringLiteral, Sendable {
     let name: String
 
     public init(stringLiteral value: String) {
@@ -31,4 +31,3 @@ struct LiquidAWSS3StorageConfiguration: FileStorageConfiguration {
         LiquidAWSS3StorageDriver(configuration: self)
     }
 }
-

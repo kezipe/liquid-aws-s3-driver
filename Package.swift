@@ -12,7 +12,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/aoenth/liquid-kit.git", from: "1.3.6"),
-        .package(url: "https://github.com/awslabs/aws-sdk-swift", exact: "0.36.2"),
+        .package(url: "https://github.com/awslabs/aws-sdk-swift", from: "1.7.62"),
     ],
     targets: [
         .target(name: "LiquidAWSS3Driver", dependencies: [
